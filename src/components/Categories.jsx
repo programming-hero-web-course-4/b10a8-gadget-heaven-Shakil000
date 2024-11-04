@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
+import ProductList from './ProductList';
 
 const Categories = ({categories}) => {
     return (
@@ -9,13 +10,13 @@ const Categories = ({categories}) => {
             <h1 className='bg-[#9538E2] text-white border px-5 py-2 rounded-full'>All Products</h1>
             {
               categories.map(category =>  
-                <Link to='/cards'><ul className='bg-gray-50 border px-4 py-2 rounded-full my-4 font-bold'>{category.category}</ul></Link>
+                <Link to={`category/${category.category}`}><ul className='bg-gray-50 border px-4 py-2 rounded-full my-4 font-bold'>{category.category}</ul></Link>
                  
                )  
             }
         </div>
-        <div className='w-full bg-yellow-300 border border-blue-600'>
-
+        <div className='w-full bg-white shadow-sm border'>
+            <Outlet></Outlet>
         </div>
         </div>
         </div>
@@ -23,12 +24,3 @@ const Categories = ({categories}) => {
 };
 
 export default Categories;
-
-{/* <aside className="w-1/4 pr-6">
-        <div className="bg-white p-4 rounded-lg shadow-md">
-          <h2 className="font-semibold text-lg mb-4">All Product</h2>
-          <ul className="space-y-2 text-sm">
-            
-          </ul>
-        </div>
-      </aside> */}

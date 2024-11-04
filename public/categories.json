@@ -1,61 +1,67 @@
 [
     {
-      "id": 1,
+      "id": 101,
       "category": "Laptop",
       "slug": "wireless-earbuds",
       "title": "Wireless Earbuds"
     },
     {
-      "id": 2,
+      "id": 102,
       "category": "Phone",
       "slug": "smart-light-bulb",
       "title": "Smart Light Bulb"
     },
     {
-      "id": 3,
+      "id": 103,
       "category": "Accessories",
       "slug": "fitness-tracker",
       "title": "Fitness Tracker"
     },
     {
-      "id": 4,
+      "id": 104,
       "category": "Gaming",
       "slug": "gaming-headset",
       "title": "Gaming Headset"
     },
     {
-      "id": 5,
+      "id": 105,
       "category": "Smart Watch",
       "slug": "bluetooth-keyboard",
       "title": "Bluetooth Keyboard"
     },
     {
-      "id": 6,
+      "id": 106,
       "category": "MacBook",
       "slug": "robot-vacuum",
       "title": "Robot Vacuum"
     },
     {
-      "id": 7,
+      "id": 107,
       "category": "Iphone",
       "slug": "portable-charger",
       "title": "Portable Charger"
     },
     {
-      "id": 8,
+      "id": 108,
       "category": "Mouse",
       "slug": "smart-watch",
       "title": "Smart Watch"
     },
     {
-      "id": 9,
+      "id": 109,
       "category": "AirPods",
       "slug": "noise-cancelling-headphones",
       "title": "Noise-Cancelling Headphones"
     },
     {
-      "id": 10,
+      "id": 1010,
       "category": "Power Bank",
+      "slug": "webcam",
+      "title": "HD Webcam"
+    },
+    {
+      "id": 1011,
+      "category": "smartphones",
       "slug": "webcam",
       "title": "HD Webcam"
     }
