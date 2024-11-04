@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "category": "Laptop",
+      "slug": "wireless-earbuds",
+      "title": "Wireless Earbuds"
+    },
+    {
+      "id": 2,
+      "category": "Phone",
+      "slug": "smart-light-bulb",
+      "title": "Smart Light Bulb"
+    },
+    {
+      "id": 3,
+      "category": "Accessories",
+      "slug": "fitness-tracker",
+      "title": "Fitness Tracker"
+    },
+    {
+      "id": 4,
+      "category": "Gaming",
+      "slug": "gaming-headset",
+      "title": "Gaming Headset"
+    },
+    {
+      "id": 5,
+      "category": "Smart Watch",
+      "slug": "bluetooth-keyboard",
+      "title": "Bluetooth Keyboard"
+    },
+    {
+      "id": 6,
+      "category": "MacBook",
+      "slug": "robot-vacuum",
+      "title": "Robot Vacuum"
+    },
+    {
+      "id": 7,
+      "category": "Iphone",
+      "slug": "portable-charger",
+      "title": "Portable Charger"
+    },
+    {
+      "id": 8,
+      "category": "Mouse",
+      "slug": "smart-watch",
+      "title": "Smart Watch"
+    },
+    {
+      "id": 9,
+      "category": "AirPods",
+      "slug": "noise-cancelling-headphones",
+      "title": "Noise-Cancelling Headphones"
+    },
+    {
+      "id": 10,
+      "category": "Power Bank",
+      "slug": "webcam",
+      "title": "HD Webcam"
+    }
+  ]
+  
