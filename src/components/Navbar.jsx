@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { BsCartCheck } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 
@@ -29,9 +29,9 @@ const Navbar = () => {
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-              <Link to="/">Home</Link>
-              <Link to="statistics">Statistics</Link>
-              <Link to="dashboard">Dashboard</Link>
+                <NavLink to="/" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Home</NavLink>
+              <NavLink to="statistics" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Statistics</NavLink>
+              <NavLink to="dashboard" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Dashboard</NavLink>
             </ul>
           </div>
           <Link to="/" className="text-xl text-white">
@@ -40,9 +40,9 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex text-white">
           <ul className="space-x-9">
-            <Link to="/">Home</Link>
-            <Link to="statistics">Statistics</Link>
-            <Link to="dashboard">Dashboard</Link>
+          <NavLink to="/" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Home</NavLink>
+              <NavLink to="statistics" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Statistics</NavLink>
+              <NavLink to="dashboard" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Dashboard</NavLink>
           </ul>
         </div>
         <div className="navbar-end flex gap-5">
