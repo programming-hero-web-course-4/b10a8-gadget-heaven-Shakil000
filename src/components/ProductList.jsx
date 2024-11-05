@@ -21,11 +21,13 @@ const ProductList = () => {
   }, [category, products])
   return (
     <div>
-      <div className="grid grid-cols-3">
-        {eachProduct.map((p, index) => (
-          <Product key={index} p={p}></Product>
-        ))}
-      </div>
+   {eachProduct.length > 0 ? (
+       <div className="grid grid-cols-3">
+       {eachProduct.map((p, index) => (
+         <Product key={index} p={p}></Product>
+       ))}
+     </div>
+   ) : <p className="text-center text-gray-500 mt-10 text-4xl">Product not available</p>}
     </div>
   );
 };

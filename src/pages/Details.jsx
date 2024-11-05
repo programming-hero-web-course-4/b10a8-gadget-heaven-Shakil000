@@ -1,21 +1,35 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 import { TbStarHalfFilled } from "react-icons/tb";
 import Navbar from "../components/Navbar";
 import Head from "../components/Head";
+import { addProducts, getProducts } from "../Utilities";
 
 const Details = () => {
   const { id } = useParams();
   const items = useLoaderData();
 
+
   const [item, setItem] = useState({});
+  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     const findProducts = items.find((item) => item.id == id);
     setItem(findProducts);
+
+    const localProduct = getProducts();
+    const isExists = localProduct.find(item => item.id == findProducts.id);
+    if(isExists){
+      setIsActive(true);
+    }
   }, []);
+
+  const handleAddedToCart = (item) => {
+    addProducts(item);
+    setIsActive(true);
+  }
   return (
     <div>
       <Head></Head>
@@ -89,9 +103,9 @@ const Details = () => {
             <p className="mb-5">{item.rating}</p>
           </div>
           <div className="flex items-center gap-4">
-            <Link className="bg-violet-600 border px-4 w-40 items-center justify-center gap-2 py-2 rounded-full font-bold text-white flex">
+            <button onClick={ () => handleAddedToCart(item)} className={` ${isActive ? 'bg-gray-600' : 'bg-violet-600'} border px-4 w-40 items-center justify-center gap-2 py-2 rounded-full font-bold text-white flex`}>
               Add To Card <IoCartOutline className="text-white" />
-            </Link>
+            </button>
             <FaRegHeart className="circle border rounded-full bg-white h-10 w-10 p-2" />
           </div>
         </div>

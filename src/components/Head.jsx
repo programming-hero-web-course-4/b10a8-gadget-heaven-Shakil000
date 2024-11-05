@@ -44,8 +44,8 @@ const Head = () => {
           </ul>
         </div>
         <div className="navbar-end flex gap-5">
-        <BsCartCheck  className="rounded-full bg-white h-10 w-10 p-2"/>
-        <FaRegHeart className="circle rounded-full bg-white h-10 w-10 p-2"/>
+        <BsCartCheck  className="rounded-full bg-white h-10 w-10 p-2"/><p className='absolute top-5 right-44 bg-red-500 text-white rounded-full px-2 text-xs'>0</p>
+        <FaRegHeart className="circle rounded-full bg-white h-10 w-10 p-2"/><p className='absolute top-5 right-28 bg-red-500 text-white rounded-full px-2 text-xs'>0</p>
         </div>
       </div>
     );
