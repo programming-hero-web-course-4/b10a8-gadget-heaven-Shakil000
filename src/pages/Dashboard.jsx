@@ -114,7 +114,7 @@ const Dashboard = () => {
       <div className="bg-[#9538E2] w-12/12 mx-auto">
         <Navbar
           mainTitle={<h1 className="text-5xl w-8/12 mx-auto font-bold text-[#FFFFFF]">Dashboard</h1>}
-          button={<Link to="/dashboard" className="bg-white px-5 rounded-full text-[#9538E2] font-bold">Cart</Link>}
+          button={<Link to="/dashboard" className="bg-white px-6 py-2 rounded-full text-[#9538E2] font-bold">Cart</Link>}
           button_w={<Link to="/dashboard" className="px-6 py-2 rounded-full text-white border font-bold -pb-28">Wishlist</Link>}
           subTitle={"Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!"}
         />

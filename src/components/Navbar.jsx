@@ -1,7 +1,5 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { BsCartCheck } from "react-icons/bs";
-import { FaRegHeart } from "react-icons/fa";
 
 
 const Navbar = ({mainTitle, subTitle, button,button_w, name, menu, icons}) => {

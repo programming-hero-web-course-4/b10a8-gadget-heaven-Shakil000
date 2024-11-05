@@ -27,7 +27,7 @@ const ProductList = () => {
          <Product key={index} p={p}></Product>
        ))}
      </div>
-   ) : <p className="text-center text-gray-500 mt-10 text-4xl">Product not available</p>}
+   ) : <p className="text-center font-bold text-violet-500 mt-10 text-4xl">Product not available</p>}
     </div>
   );
 };
