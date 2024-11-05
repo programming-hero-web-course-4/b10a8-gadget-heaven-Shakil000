@@ -3,10 +3,11 @@ import { Link, NavLink } from "react-router-dom";
 import { BsCartCheck } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 
-const Navbar = () => {
+
+const Navbar = ({mainTitle, subTitle, button,button_w, name, menu, icons}) => {
   return (
-      <div className="bg-[#9538E2] w-11/12 rounded-xl mt-14 mx-auto">
-    <div className="border-x border-gray-300 -mx-2 rounded my-2">
+      <div className="bg-[#9538E2] w-11/12 rounded-xl mx-auto">
+    <div className="my-5">
       <div className="navbar max-w-screen-xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -35,25 +36,23 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/" className="text-xl text-white">
-            Gadget haven
+            {name}
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex text-white">
-          <ul className="space-x-9">
-          <NavLink to="/" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Home</NavLink>
-              <NavLink to="statistics" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Statistics</NavLink>
-              <NavLink to="dashboard" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Dashboard</NavLink>
-          </ul>
+          {menu}
         </div>
         <div className="navbar-end flex gap-5">
-        <BsCartCheck  className="rounded-full bg-white h-10 w-10 p-2"/>
-        <FaRegHeart className="circle rounded-full bg-white h-10 w-10 p-2"/>
+        {icons}
         </div>
       </div>
-      <div className="text-center pt-10 pb-52">
-        <h1 className="text-5xl font-bold text-[#FFFFFF]">Upgrade Your Tech Accessorize with <br /> Gadget Heaven Accessories</h1>
-        <p className="text-[16px] text-[#FFFFFF] py-10">Explore the latest gadgets that will take your experience to the next level. From smart devices to <br /> the coolest accessories, we have it all!</p>
-        <button className="bg-white px-5 py-2 rounded-full text-[#9538E2] font-bold">Shop Now</button>
+      <div className="text-center pb-48">
+        <h1 className="text-5xl w-8/12 mx-auto font-bold text-[#FFFFFF]">{mainTitle}</h1>
+        <p className="text-[16px] text-[#FFFFFF] py-10 w-5/12 mx-auto">{subTitle}</p>
+       <div className="space-x-3">
+       <button className="bg-white px-6 py-2 rounded-full text-[#9538E2] font-bold">{button}</button>
+       <button>{button_w}</button>
+       </div>
       </div>
     </div>
     </div>
