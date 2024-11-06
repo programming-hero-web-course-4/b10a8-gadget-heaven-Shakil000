@@ -33,9 +33,4 @@ const removeProducts = id => {
 }
 
 
-
-const handleCart = () => {
-    
-}
-
 export {addProducts,getProducts,removeProducts}

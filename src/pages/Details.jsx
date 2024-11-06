@@ -5,7 +5,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { TbStarHalfFilled } from "react-icons/tb";
 import Navbar from "../components/Navbar";
 import Head from "../components/Head";
-import { addProducts, getProducts } from "../Utilities";
+import { addProducts, getProducts} from "../Utilities";
 
 const Details = () => {
   const { id } = useParams();
@@ -26,13 +26,21 @@ const Details = () => {
     }
   }, []);
 
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    // Retrieve the cart items and set the count
+    const cartItems = getProducts();
+    setCartCount(cartItems.length);
+  }, []);
+
   const handleAddedToCart = (item) => {
     addProducts(item);
     setIsActive(true);
   }
   return (
     <div>
-      <Head></Head>
+      <Head cartCount={cartCount}></Head>
       <Navbar
         mainTitle={"Product Details"}
         subTitle={
