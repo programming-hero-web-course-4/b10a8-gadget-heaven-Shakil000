@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Outlet } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import Statistics from "../pages/Statistics";
 import Dashboard from "../pages/Dashboard";
@@ -6,6 +6,8 @@ import Home from "../pages/Home";
 import ErrorPage from "../components/ErrorPage";
 import ProductList from "../components/ProductList";
 import Details from "../pages/Details";
+import Wishlist from "../pages/wishList";
+
 
 const routes = createBrowserRouter([
     {
@@ -41,8 +43,8 @@ const routes = createBrowserRouter([
         },
         {
             path: "/dashboard",
-            element: <Dashboard></Dashboard>
-        }
+            element: <Dashboard></Dashboard>,
+        },
       ]
     },
   ]);

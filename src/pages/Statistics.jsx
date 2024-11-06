@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Head from "../components/Head";
 import { Link } from "react-router-dom";
+import Example from "./States";
 
 const Statistics = () => {
   return (
@@ -27,6 +28,7 @@ const Statistics = () => {
         <h1 className="text-4xl text-center font-bold text-violet-500 mt-7">
           No Data to Show Statistics
         </h1>
+        <Example></Example>
       </div>
     </div>
   );

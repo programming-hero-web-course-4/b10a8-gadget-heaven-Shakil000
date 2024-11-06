@@ -49,7 +49,7 @@ const Dashboard = () => {
         imageHeight: 50,
         title: "Payment Successful",
         text: "Thanks for purchasing",
-        text: `Total: ${totalPrice} Taka`,
+        texts: `Total: ${totalPrice} Taka`,
       });
     }else{
       Swal.fire({
@@ -80,7 +80,7 @@ const Dashboard = () => {
           }
           button_w={
             <Link
-              to="/dashboard"
+              to= "/"
               className="px-6 py-2 rounded-full text-white border font-bold -pb-28"
             >
               Wishlist
