@@ -43,7 +43,7 @@ const Dashboard = () => {
   };
 
   const Purchase = () => {
-    if(totalPrice > 0 ){
+    if (totalPrice > 0) {
       Swal.fire({
         imageUrl: "../../src/assets/Group.png",
         imageHeight: 50,
@@ -51,7 +51,7 @@ const Dashboard = () => {
         text: "Thanks for purchasing",
         texts: `Total: ${totalPrice} Taka`,
       });
-    }else{
+    } else {
       Swal.fire({
         icon: "error",
         title: "Oops... <br/> Please select any product first",
@@ -80,7 +80,7 @@ const Dashboard = () => {
           }
           button_w={
             <Link
-              to= "/"
+              to="/wishlist"
               className="px-6 py-2 rounded-full text-white border font-bold -pb-28"
             >
               Wishlist

@@ -55,9 +55,9 @@ const Wishlist = () => {
 
       <div className="flex justify-between items-center w-11/12 mx-auto pt-10">
         <p className="font-bold text-2xl">Wishlist</p>
-        <button className="bg-[#9538E2] px-5 py-3 rounded-full text-white font-bold">
-          Purchase
-        </button>
+        <Link to="/dashboard" className="bg-[#9538E2] px-5 py-3 rounded-full text-white font-bold">
+          Go to Cart
+        </Link>
       </div>
 
       <div>

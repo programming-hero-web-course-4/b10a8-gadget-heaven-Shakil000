@@ -3,15 +3,22 @@ import { Link, NavLink } from 'react-router-dom';
 import { BsCartCheck } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import { getProducts } from '../Utilities';
+import { wishGetProducts } from '../Utilities/wish';
 
 const Head = () => {
 
   const [cartCount, setCartCount] = useState(0);
+  const [wishCartCount, setWishCartCount] = useState(0);
 
   useEffect(() => {
     // Retrieve the cart items and set the count
     const cartItems = getProducts();
     setCartCount(cartItems.length);
+  }, []);
+
+  useEffect(() => {
+    const wishCartItems = wishGetProducts();
+    setWishCartCount(wishCartItems.length);
   }, []);
 
 
@@ -56,7 +63,7 @@ const Head = () => {
         </div>
         <div className="navbar-end flex gap-5">
        <Link to= "/dashboard"> <BsCartCheck  className="rounded-full bg-white h-10 w-10 p-2"/><p className='absolute top-5 right-44 bg-red-500 text-white rounded-full px-2 text-xs'>{cartCount}</p></Link>
-       <Link to= "/dashboard"> <FaRegHeart className="circle rounded-full bg-white h-10 w-10 p-2"/><p className='absolute top-5 right-28 bg-red-500 text-white rounded-full px-2 text-xs'>0</p></Link>
+       <Link to= "/dashboard"> <FaRegHeart className="circle rounded-full bg-white h-10 w-10 p-2"/><p className='absolute top-5 right-28 bg-red-500 text-white rounded-full px-2 text-xs'>{wishCartCount}</p></Link>
         </div>
       </div>
     );

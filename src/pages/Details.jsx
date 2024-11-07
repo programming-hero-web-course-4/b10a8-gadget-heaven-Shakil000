@@ -16,6 +16,7 @@ const Details = () => {
   const [isActive, setIsActive] = useState(false);
   const [wishIsActive, setWishIsActive] = useState(false);
   const [cartCount, setCartCount] = useState(0);
+  const [wishCartCount, setWishCartCount] = useState(0);
 
   useEffect(() => {
     const findProducts = items.find((item) => item.id == id);
@@ -40,6 +41,11 @@ const Details = () => {
     setCartCount(cartItems.length);
   }, []);
 
+  useEffect(() => {
+    const wishCartItems = wishGetProducts();
+    setWishCartCount(wishCartItems.length);
+  }, []);
+
   const handleAddedToCart = (item) => {
     addProducts(item);
     setIsActive(true);
@@ -47,9 +53,11 @@ const Details = () => {
     setCartCount(cartItems.length);
   };
 
-  const handleWishList = (wishItem) => {
-    wishAddProducts(wishItem);
+  const handleWishList = (item) => {
+    wishAddProducts(item);
     setWishIsActive(true);
+    const wishCartItems = wishGetProducts();
+    setWishCartCount(wishCartItems.length);
   };
 
   return (
@@ -101,14 +109,18 @@ const Details = () => {
           <div className="flex items-center gap-4">
             <button
               onClick={() => handleAddedToCart(item)}
-              disabled={isActive}
-              className={`${isActive ? 'bg-gray-600' : 'bg-violet-600'} border px-4 w-40 items-center justify-center gap-2 py-2 rounded-full font-bold text-white flex`}
+              // disabled={isActive}
+              className={`${isActive ? 'bg-gray-300 border-4 border-x-2 border-red-600 rounded-full cursor-pointer' 
+                : 'bg-white border-4 border-green-600 rounded-full cursor-pointer'} 
+              border px-6 w-48 items-center justify-center gap-2 py-2 rounded-full font-bold text-black flex`}
             >
               {isActive ? "Added to Cart" : "Add To Cart"}
-              <IoCartOutline className="text-white" />
+              <IoCartOutline className="text-black font-bold" />
             </button>
-            <button onClick={() => handleWishList(wishItem)}>
-              <FaRegHeart className={`circle border rounded-full bg-white h-10 w-10 p-2 ${wishIsActive ? 'text-red-600' : 'text-violet-600'}`} />
+            <button onClick={() => handleWishList(item)}>
+              <FaRegHeart className={`circle border rounded-full bg-white h-14 w-14 p-2 text-black
+                 ${wishIsActive ? 'bg-gray-300 border-y-2 text-5xl border-4 border-red-600 rounded-full cursor-pointer' 
+                 : 'bg-white text-5xl border-4 border-green-600 rounded-full cursor-pointer'}`} />
             </button>
           </div>
         </div>

@@ -1,8 +1,9 @@
 import React from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 import Head from "./Head";
+import { NavLink } from "react-router-dom";
 
-const DashboardProduct = ({ wsp, removeProduct }) => {
+const DashboardProduct = ({ wsp, wishRemoveProduct }) => {
   const {
     id,
     product_title,
@@ -12,7 +13,8 @@ const DashboardProduct = ({ wsp, removeProduct }) => {
   } = wsp;
 
   return (
-    <div className="w-11/12 mx-auto p-5 m-5">
+    <NavLink to={`/products/${id}`}>
+      <div className="w-11/12 mx-auto p-5 m-5">
       <div className="bg-gray-100 flex justify-between">
         <div className="flex gap-10">
           <img className="w-36 h-32 p-2" src={product_image} alt={product_title} />
@@ -24,12 +26,13 @@ const DashboardProduct = ({ wsp, removeProduct }) => {
         </div>
         <div className="flex items-center mr-10">
           <AiFillCloseCircle
-            onClick={() => removeProduct()}
+            onClick={() => wishRemoveProduct(id)}
             className="text-5xl border-4 border-red-600 rounded-full cursor-pointer"
           />
         </div>
       </div>
-    // </div>
+    </div>
+    </NavLink>
   );
 };
 

@@ -45,6 +45,10 @@ const routes = createBrowserRouter([
             path: "/dashboard",
             element: <Dashboard></Dashboard>,
         },
+        {
+            path: "wishlist",
+            element: <Wishlist></Wishlist>
+        },
       ]
     },
   ]);
