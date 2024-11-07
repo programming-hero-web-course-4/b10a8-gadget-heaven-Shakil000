@@ -22,7 +22,7 @@ const ProductList = () => {
   return (
     <div>
    {eachProduct.length > 0 ? (
-       <div className="grid grid-cols-3">
+       <div className="lg:grid lg:grid-cols-3">
        {eachProduct.map((p, index) => (
          <Product key={index} p={p}></Product>
        ))}

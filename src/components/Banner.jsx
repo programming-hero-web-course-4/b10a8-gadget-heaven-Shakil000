@@ -4,7 +4,7 @@ import banner from '../assets/banner.jpg'
 const Banner = () => {
     return (
             <div className='-mt-40'>
-                <img className='h-96 w-7/12 mx-auto border border-white p-3 rounded relative' src={banner} alt="" />
+                <img className='lg:h-96 lg:w-7/12 w-10/12 mx-auto border border-white p-3 rounded relative' src={banner} alt="" />
             </div>
     );
 };

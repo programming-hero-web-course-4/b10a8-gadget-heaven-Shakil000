@@ -3,8 +3,8 @@ import { Link, Outlet } from 'react-router-dom';
 const Categories = ({ categories }) => {
     return (
         <div className='max-w-screen-xl mx-auto'>
-            <div className='flex gap-10'>
-                <div className='w-72 border p-5 bg-white shadow-sm'>
+            <div className='lg:flex gap-10'>
+                <div className='lg:w-72 text-center border p-5 bg-white shadow-sm'>
                     <Link to="/" className='bg-[#9538E2] text-white border px-5 py-2 rounded-full'>All Products</Link>
                     {
                         categories.map((category, index) => (

@@ -69,7 +69,7 @@ const Details = () => {
           "Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!"
         }
       />
-      <div className="max-w-screen-lg mx-auto flex border rounded-xl gap-5 -mt-60 bg-white">
+      <div className="max-w-screen-lg mx-auto lg:flex justify-center border rounded-xl gap-5 -mt-60 bg-white">
         <div className="w-full">
           <img className="p-5" src={item.product_image} alt={item.product_title} />
         </div>

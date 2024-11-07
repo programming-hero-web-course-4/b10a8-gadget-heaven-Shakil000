@@ -19,8 +19,8 @@ const Product = ({ p }) => {
       <div className="border p-5 m-5 rounded">
       <Link to={`/products/${id}`}>
         <div className=" bg-gray-50 rounded-xl">
-          <div className="flex items-center justify-center">
-            <img className="w-96 h-48" src={product_image} alt="" />
+          <div className="lg:flex items-center justify-center">
+            <img className="lg:w-96 lg:h-48" src={product_image} alt="" />
           </div>
         </div>
         </Link>

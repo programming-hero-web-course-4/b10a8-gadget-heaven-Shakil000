@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="max-w-screen-xl mx-auto">
       <div className="text-center">
           <h1 className="text-2xl font-bold pt-32">Gadget Heaven</h1>
-          <p className="text-gray-300">Leading the way in cutting-edge technology and innovation.</p>
+          <p className="text-gray-300 px-2">Leading the way in cutting-edge technology and innovation.</p>
           <p className="divider"></p>
         </div>
       <footer className="footer justify-around p-10">

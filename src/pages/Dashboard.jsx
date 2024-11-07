@@ -66,7 +66,7 @@ const Dashboard = () => {
       <div className="bg-[#9538E2] w-12/12 mx-auto">
         <Navbar
           mainTitle={
-            <h1 className="text-5xl w-8/12 mx-auto font-bold text-[#FFFFFF]">
+            <h1 className="text-5xl lg:w-8/12 mx-auto font-bold text-[#FFFFFF]">
               Dashboard
             </h1>
           }
@@ -94,10 +94,10 @@ const Dashboard = () => {
 
       <div className="flex justify-between items-center w-11/12 mx-auto pt-10">
         <div>
-          <p className="font-bold text-2xl">Cart</p>
+          <p className="font-bold -mt-11 text-2xl">Cart</p>
         </div>
-        <div className="flex gap-5 items-center justify-center">
-          <p className="font-bold text-2xl">Total cost: {totalPrice}Tk</p>
+        <div className="lg:flex gap-5 items-center justify-center">
+          <p className="font-bold text-2xl mb-3">Total cost: {totalPrice}Tk</p>
           <button
             onClick={() => handleSort("price")}
             className="bg-white px-5 py-3 border border-violet-500 rounded-full text-[#9538E2] font-bold"
