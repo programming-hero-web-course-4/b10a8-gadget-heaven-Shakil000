@@ -32,10 +32,29 @@ const Home = () => {
              
             <Navbar name={'Gadget haven'}
             icons={
-                <ul className='flex gap-5'>
-                    <Link to="/dashboard"> <BsCartCheck  className="rounded-full bg-white h-10 w-10 p-2"/><p className='absolute top-5 lg:right-44 right-5 bg-red-500 text-white rounded-full px-2 text-xs'>{cartCount}</p></Link>
-                    <Link to="/wishlist"> <FaRegHeart className="circle rounded-full bg-white h-10 w-10 p-2"/><p className='absolute top-5 lg:right-28 right-20 bg-red-500 text-white rounded-full px-2 text-xs'>{wishCartCount}</p></Link>
-                </ul>
+              <ul className='flex gap-5 relative'>
+              <li className="relative">
+                  <Link to="/dashboard" aria-label="Shopping Cart">
+                      <BsCartCheck className="rounded-full bg-white h-10 w-10 p-2" />
+                      {cartCount > 0 && (
+                          <p className='absolute top-5 right-2 bg-red-500 text-white rounded-full px-2 text-xs'>
+                              {cartCount}
+                          </p>
+                      )}
+                  </Link>
+              </li>
+              <li className="relative">
+                  <Link to="/wishlist" aria-label="Wishlist">
+                      <FaRegHeart className="rounded-full bg-white h-10 w-10 p-2" />
+                      {wishCartCount > 0 && (
+                          <p className='absolute top-5 right-2 bg-red-500 text-white rounded-full px-2 text-xs'>
+                              {wishCartCount}
+                          </p>
+                      )}
+                  </Link>
+              </li>
+          </ul>
+          
             }
              mainTitle={'Upgrade Your Tech Accessorize with Gadget Heaven Accessories'} 
             menu={

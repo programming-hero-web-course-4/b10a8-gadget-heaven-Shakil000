@@ -65,9 +65,23 @@ const Head = () => {
           </ul>
         </div>
         <div className="navbar-end flex gap-5">
-       <Link to= "/dashboard"> <BsCartCheck  className="rounded-full bg-white h-10 w-10 p-2"/><p className='absolute top-5 lg:right-44 right-14 bg-red-500 text-white rounded-full px-2 text-xs'>{cartCount}</p></Link>
-       <Link to= "/wishlist"> <FaRegHeart className="circle rounded-full bg-white h-10 w-10 p-2"/><p className='absolute top-5 lg:right-28 right-0 bg-red-500 text-white rounded-full px-2 text-xs'>{wishCartCount}</p></Link>
-        </div>
+    <Link to="/dashboard" aria-label="Shopping Cart">
+        <BsCartCheck className="rounded-full bg-white h-10 w-10 p-2" />
+        {cartCount > 0 && (
+            <p className='absolute top-5 right-14 lg:right-32 bg-red-500 text-white rounded-full px-2 text-xs'>
+                {cartCount}
+            </p>
+        )}
+    </Link>
+    <Link to="/wishlist" aria-label="Wishlist">
+        <FaRegHeart className="circle rounded-full bg-white h-10 w-10 p-2" />
+        {wishCartCount > 0 && (
+            <p className='absolute top-5 right-1 lg:right-48 bg-red-500 text-white rounded-full px-2 text-xs'>
+                {wishCartCount}
+            </p>
+        )}
+    </Link>
+</div>
       </div>
     );
 };

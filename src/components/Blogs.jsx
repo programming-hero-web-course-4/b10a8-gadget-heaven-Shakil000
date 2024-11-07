@@ -6,9 +6,9 @@ import Head from './Head';
 
 const Blogs = () => {
     return (
-        <div className='max-w-screen-xl mx-auto px-5'>
+        <div className='max-w-screen-xl mx-auto'>
             <Head></Head>
-            <div className='lg:grid'>
+            <div>
             <div>
                 <img className='w-full' src={hake} alt="" />
             </div>
