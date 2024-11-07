@@ -4,6 +4,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import Footer from '../components/Footer';
 import { Outlet } from 'react-router-dom';
 
+
 const MainLayout = () => {
     return (
         <div>

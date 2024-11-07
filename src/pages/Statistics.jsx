@@ -3,10 +3,16 @@ import Navbar from "../components/Navbar";
 import Head from "../components/Head";
 import { Link } from "react-router-dom";
 import Example from "./States";
+import { Helmet } from "react-helmet";
 
 const Statistics = () => {
   return (
     <div>
+      <Helmet>
+        <title>
+          Statistics | Gadget Haven
+        </title>
+      </Helmet>
       <Head />
       <div className="bg-[#9538E2] w-12/12 mx-auto">
         <Navbar

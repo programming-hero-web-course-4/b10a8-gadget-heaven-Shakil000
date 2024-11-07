@@ -5,6 +5,7 @@ import { getProducts, removeProducts } from "../Utilities";
 import DashboardProduct from "../components/DashboardProduct";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const Dashboard = () => {
   const [selectedProduct, setSelectedProduct] = useState([]);
@@ -62,6 +63,11 @@ const Dashboard = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>
+          Dashboard | Gadget haven
+        </title>
+      </Helmet>
       <Head />
       <div className="bg-[#9538E2] w-12/12 mx-auto">
         <Navbar

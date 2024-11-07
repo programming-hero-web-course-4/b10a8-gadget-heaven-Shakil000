@@ -10,6 +10,7 @@ import Wishlist from "../pages/wishList";
 import Blogs from "../components/Blogs";
 
 
+
 const routes = createBrowserRouter([
     {
       path: "/",

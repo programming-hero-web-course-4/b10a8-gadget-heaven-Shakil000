@@ -1,12 +1,18 @@
 import React from 'react';
 import hake from '../../src/assets/hc.webp'
 import Head from './Head';
+import { Helmet } from 'react-helmet';
 
 
 
 const Blogs = () => {
     return (
         <div className='max-w-screen-xl mx-auto'>
+            <Helmet>
+                <title>
+                    Blogs | Gadget Haven
+                </title>
+            </Helmet>
             <Head></Head>
             <div>
             <div>
