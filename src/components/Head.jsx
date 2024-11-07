@@ -48,6 +48,7 @@ const Head = () => {
                 <NavLink to="/" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Home</NavLink>
               <NavLink to="/statistics" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Statistics</NavLink>
               <NavLink to="/dashboard" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Dashboard</NavLink>
+              <NavLink to="/blog" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Blogs</NavLink>
             </ul>
           </div>
           <Link to="/" className="text-xl text-black">
@@ -59,6 +60,8 @@ const Head = () => {
           <NavLink to="/" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Home</NavLink>
               <NavLink to="/statistics" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Statistics</NavLink>
               <NavLink to="/dashboard" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Dashboard</NavLink>
+              <NavLink to="/blog" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Blogs</NavLink>
+
           </ul>
         </div>
         <div className="navbar-end flex gap-5">

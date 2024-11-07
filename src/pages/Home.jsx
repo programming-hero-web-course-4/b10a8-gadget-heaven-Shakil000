@@ -29,6 +29,7 @@ const Home = () => {
 
     return (
         <div>
+             
             <Navbar name={'Gadget haven'}
             icons={
                 <ul className='flex gap-5'>
@@ -42,6 +43,8 @@ const Home = () => {
           <NavLink to="/" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Home</NavLink>
               <NavLink to="statistics" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Statistics</NavLink>
               <NavLink to="dashboard" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Dashboard</NavLink>
+              <NavLink to="blog" className={({isActive}) => `font-bold ${isActive ? 'text-green-400 underline' : ''}`}>Blogs</NavLink>
+
           </ul>
             }
             subTitle={'Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!'} 

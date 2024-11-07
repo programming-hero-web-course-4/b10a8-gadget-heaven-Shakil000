@@ -44,6 +44,14 @@ const Navbar = ({
                 >
                   Dashboard
                 </NavLink>
+                <NavLink
+                  to="blog"
+                  className={({ isActive }) =>
+                    `font-bold ${isActive ? "text-green-400 underline" : ""}`
+                  }
+                >
+                  Blog
+                </NavLink>
               </ul>
             </div>
             <Link to="/" className="text-xl text-white">
